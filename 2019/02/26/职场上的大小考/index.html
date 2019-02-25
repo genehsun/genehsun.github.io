@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT, Wakim, Blog">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="每当财年底的时候，公司会对员工进行全年的绩效考核，这种考核一般会决定员工当年的奖金和来年的升职加薪。有些公司还有半年考核，甚至是季度考核。绩效考核的时候有直属老板、老板的老板、HR、或者其他横向的老板参与。直属老板对员工的工作内容和表现是比较清楚的，但是其他人就不一定了。这种考核不看你修复了多少bug，不看你做了多少“支持性”的团队工作，而是看你Owner的项目结果好不好。你作为技术人员是通过什么">
+<meta property="og:type" content="article">
+<meta property="og:title" content="职场上的大小考">
+<meta property="og:url" content="http://yoursite.com/2019/02/26/职场上的大小考/index.html">
+<meta property="og:site_name" content="积跬步以致千里">
+<meta property="og:description" content="每当财年底的时候，公司会对员工进行全年的绩效考核，这种考核一般会决定员工当年的奖金和来年的升职加薪。有些公司还有半年考核，甚至是季度考核。绩效考核的时候有直属老板、老板的老板、HR、或者其他横向的老板参与。直属老板对员工的工作内容和表现是比较清楚的，但是其他人就不一定了。这种考核不看你修复了多少bug，不看你做了多少“支持性”的团队工作，而是看你Owner的项目结果好不好。你作为技术人员是通过什么">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-02-25T18:07:02.427Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="职场上的大小考">
+<meta name="twitter:description" content="每当财年底的时候，公司会对员工进行全年的绩效考核，这种考核一般会决定员工当年的奖金和来年的升职加薪。有些公司还有半年考核，甚至是季度考核。绩效考核的时候有直属老板、老板的老板、HR、或者其他横向的老板参与。直属老板对员工的工作内容和表现是比较清楚的，但是其他人就不一定了。这种考核不看你修复了多少bug，不看你做了多少“支持性”的团队工作，而是看你Owner的项目结果好不好。你作为技术人员是通过什么">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/02/26/职场上的大小考/">
+
+
+
+
+
+  <title>职场上的大小考 | 积跬步以致千里</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">积跬步以致千里</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/26/职场上的大小考/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wakim Sun">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="积跬步以致千里">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">职场上的大小考</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-26T00:58:05+08:00">
+                2019-02-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>每当财年底的时候，公司会对员工进行全年的绩效考核，这种考核一般会决定员工当年的奖金和来年的升职加薪。有些公司还有半年考核，甚至是季度考核。绩效考核的时候有直属老板、老板的老板、HR、或者其他横向的老板参与。直属老板对员工的工作内容和表现是比较清楚的，但是其他人就不一定了。这种考核不看你修复了多少bug，不看你做了多少“支持性”的团队工作，而是看你Owner的项目结果好不好。你作为技术人员是通过什么技术手段，如何帮助项目取得了好的结果，要指出技术的难点和复杂性在哪里。而且好的结果还要考虑如何量化，如何做数据指标的对比，你做这项工作之前的数据和你接手之后的数据的直观比对，以此来打动评委。如何在短时间内直观、有重点地向他们展示这一年的工作成果是很需要技巧的。如果是“临时抱佛脚”在临近考核的时候匆匆忙忙做出不直观的PPT，或者Presentation的能力欠佳，又或者对解决的问题看得不够全面透彻、缺少独立的思考和见解，都会在考核过程中受到很多挑战。所以在平时工作中就要做好这方面的积累、总结和练习。公司一般会要求员工写周报、双周报，甚至有的会要求写日报。日常工作中要重视这些总结，否则到了年底容易陷入不知如何做好这场“职场考试”的窘境中。我想从自己已经经历的三份工作中做一下这方面的总结，期待以后能够做得更好。</p>
+<h3 id="2012-08-2014-04"><a href="#2012-08-2014-04" class="headerlink" title="2012.08~2014.04"></a>2012.08~2014.04</h3><p>第一份工作是日立集团旗下的一家子公司，传统的软件企业。在企业管理方面引入了“PDCA循环”要求员工写日报总结一天的工作，以邮件的形式发给主管以及组内成员。PDCA循环，即计划（Plan）、执行（Do）、检查（Check）、调整（Action）。这个原则要求对手头的各项工作先做出计划、设定目标，然后实施计划、记录具体步骤过程，之后要检查进度和效果，有哪些阻碍和困难，最后把成功的总结出来，不成功的放到下一个循环中去。我当时的做法是在Excel中制作PDCA的表格填写日报，年终总结的时候方便查询。一般P和A部分每天的变化比较小，而D和C可写的内容比较多。第一份工作总共经历过两次绩效考核，考核的等级分为A、B、C、D。2012年8月到2013年1月是第一年，刚毕业工作中表现平平，拿到了C，那一年的绩效考核是我职场生涯的第一次考试。2013年1月至2014年1月是第二年，这一年做了一个比较成功的项目，但是年底Review的时候自我感觉并不好，当众演讲的时候很紧张，PPT也做得不够直观，这一年拿到了B。等到2014年3月提出辞职的时候，人事找我聊说因为去年拿了B，所以今年在加薪方面也会比大多数人多，但是我那时候已经下定决心要转型做移动互联网，所以也就没有留下了。总结第一份工作，那个时候对这种工作管理的方式理解的并不深，很多地方没有做到位，在PPT制作方面和Presentation方面的能力也都因为锻炼得少而做得不好。</p>
+<h3 id="2014-04-2016-09"><a href="#2014-04-2016-09" class="headerlink" title="2014.04~2016.09"></a>2014.04~2016.09</h3><p>第二份工作来到一家移动互联网创业公司。因为是初创公司，所以这里有很多管理还不完善。同时也因为是创业公司，在这里会引入一些比较先进的协作方式。比如每天站立会沟通重要事项，采用敏捷开发方法小步快速迭代，把任务写在便签钉在墙上认领。日报也是要发的，没有严格的格式要求，也没有年底的绩效考核，年底的时候只是普发十三薪（老板会根据员工的贡献度给予一定的期权）。所以在这里这方面的锻炼机会减少了，也就没有更多的心得了。然而从2014年4月到2016年9月，在这里工作了将近两年半的时间，以至于刚来到了下一家公司的时候，对绩效考核的门道几乎是又从零开始摸索的。</p>
+<h3 id="2016-09-至今"><a href="#2016-09-至今" class="headerlink" title="2016.09~至今"></a>2016.09~至今</h3><p>第三份工作，也就是现在的公司，不管是对周报的严格要求程度，还是对绩效考核的重视程度，都可以说是近乎“苛刻”的。这是好事，对员工的个人成长相当有帮助。首先说周报，一线的员工要把周报发给整个技术部门的邮件大组，如果是项目PM的角色，还要抄送业务方。Team Leader除了自己的个人工作汇报，还要收集团队里成员的周报汇总发给老板，老板要汇总Team Leader的周报发给老板的老板。所以为了老板们能有足够的时间写周报，一线的同学往往每周四晚上就要把周报发出来了。一线同学要写的是做项目的过程中踩的坑、某个技术点的解决方案、甚至可以是代码的分享，还可以写个人的学习、收获了什么新知识。要及时思考，有感就发。如果是项目PM，还要写项目背景、项目目标、关键时间节点（提测时间、上线时间、接口方的时间点、里程碑时间点等等）、当前进度（正常还是延期、延期的原因、带来的风险）、技术难点如何克服、技术重点总结、跨部门沟通事项、项目数据（业务数据、性能数据）、分析数据波动的原因（为什么涨、为什么跌）、项目思考（为什么要做这个项目、要解决现在存在的什么问题、做了之后真的能解决吗、有没有自己的见解）。再说绩效考核，初期要先做好规划，今年要支撑哪些业务、要做什么技术提升。一般绩效分为以下几个方面，质量效率、业务支撑、团队协作、个人成长，所占的比例有所侧重。年底的时候再对这些目标进行自评。但是往往会发现，在年初要做好这样的规划是很难的，因为变化永远在意料之外。绩效考核的一个重要环节就是Review，要准备PPT把这一年的工作成果写清楚。这时候就能体会周报的重要性了。如果没有每周的总结积累，想在年底回顾这三百多天的工作内容和成果，以及重新思考一遍技术方案，那就是临时抱佛脚，不会做得很好的。PPT里要体现一年做的重点项目，业务方的诉求是什么，前期有没有数据可以推导出做这件事的必要性，技术上用什么方案实现了需求，带来的结果数据如何，为什么做这些能带来数据的利好，如果结果不好又是因为什么，个人从中有没有得到什么经验，成长在哪里（业务理解能力、技术沉淀）。当然还要做下一年的规划，当前还存在什么问题，用自己的观点规划产品，抓住重点规划技术。另外一个重要的点是，PPT要做得简洁直观，做完要留有时间试讲，自己掐时间模拟现场讲出来，克服紧张的心理。每一页和每一页之间要有逻辑地衔接。我有两次讲完都被主管提出讲得让听众昏昏欲睡。意思是讲的不够有激情、不够有吸引力、没有跟台下有良好的互动。Review的最后一个环节，往往是会有人提出一些比较有挑战性的问题，这时候要不畏“强权”，勇于探讨，把自己独立的思考讲出来，让提问者知道自己不是一个被动的执行者。平时工作中除了向自己Owner的项目拿结果，如果能帮助团队招聘到新人，在老板那里也是很加分的。因为老板的老板往往会给他设定这方面的kpi。老板除了要招新人还要保障现有成员不要流失，否则老板在被考核管理能力这一项时会站不住脚。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Wakim Sun</p>
+              <p class="site-description motion-element" itemprop="description">加油 努力 奋斗</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#2012-08-2014-04"><span class="nav-number">1.</span> <span class="nav-text">2012.08~2014.04</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2014-04-2016-09"><span class="nav-number">2.</span> <span class="nav-text">2014.04~2016.09</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2016-09-至今"><span class="nav-number">3.</span> <span class="nav-text">2016.09~至今</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Wakim Sun</span>
+
+  
+</div>
+
+
+  <div class="powered-by">用 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 搭建</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
